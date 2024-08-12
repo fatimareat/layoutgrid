@@ -1,0 +1,146 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+/* GRID */
+
+nav {
+    grid-area: navbar;
+    background-color: #006070;
+    text-align: center;
+    padding: 1em 0;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: #e1ebeb;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+main {
+    grid-area: main;
+    background-color: #e1ebeb;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #006070;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* NAVBAR */
+nav p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* SIDEBAR */
+aside h2 {
+    font-size: 1.2em;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.category-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.category-name {
+    font-size: 1em;
+}
+
+.category-count {
+    margin-left: 0.5em;
+    font-size: 1em;
+    color: #006070;
+}
+
+.category-item:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+/* MAIN */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: white;
+    align-items: center;
+    height: 100%;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.product-card-item {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+.product-card-price {
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 0.5em 0;
+    background-color: #006070;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.product-card button:hover {
+    background-color: #039ab4;
+}
+
+/* FOOTER */
+footer p {
+    font-size: 1em;
+    color: #ffffff;
+}
